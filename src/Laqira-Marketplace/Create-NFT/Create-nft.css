@@ -1,0 +1,281 @@
+/* ---- MARKETPLACE PAGE /creat new NFT/ --------------*/
+
+.creat-new-NFT {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2f47;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  font-family: "Poppins", sans-serif;
+}
+.creat-new-NFT-content {
+  padding: 30px 45px;
+  background-color: #2a2f47;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+}
+.create-new-NFT-box1 {
+  text-align: left;
+  margin: 20px 30px;
+}
+.new-NFT-box1-header {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+}
+.new-NFT-box1-paragraph {
+  font-size: 14px;
+  font-weight: 100;
+  color: #ccc;
+}
+.create-new-NFT-box2 {
+  text-align: left;
+  margin: 20px 30px;
+}
+.new-NFT-box2-header {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 20px;
+}
+.new-NFT-box2-paragraph {
+  font-size: 13px;
+  font-weight: 100;
+  color: #ccc;
+}
+.create-new-NFT-box3 {
+  text-align: left;
+  margin: 20px 125px;
+  padding: 20px 30px;
+  border: 3px dotted #a58bef;
+}
+.create-new-NFT-box3-drop-zone-lable {
+  color: white;
+  font-size: 12px;
+  padding: 20px;
+  transition: all 200ms ease;
+}
+
+.drop-zone-lable-symbol {
+  color: #c1fa3d;
+  font-size: 50px;
+  transition: all 200ms ease;
+}
+
+.create-new-NFT-box3-button {
+  margin: 0 auto;
+  font-size: 15px;
+  padding: 17px 20px;
+  border-radius: 25px;
+  color: #121212;
+  border: none;
+  margin-bottom: 10px;
+  background-color: #97fb57;
+  width: 60%;
+  transition: all 200ms ease;
+}
+
+/*file-list box 3*/
+.file-list {
+  margin-top: 15px;
+  color: white;
+  font-size: 12px;
+}
+.create-new-NFT-box3-selected-files {
+  font-size: 8px;
+}
+.create-new-NFT-box4 {
+  text-align: left;
+  margin: 20px 30px;
+}
+.create-new-NFT-box4-form-content {
+  color: white;
+}
+.create-new-NFT-box4-form-content-item-name-lable {
+  margin-bottom: 8px;
+}
+.create-new-NFT-box4-form-content-item-name-input {
+  border-style: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #121212;
+  color: #ccc;
+  transition: all 200ms ease;
+}
+.create-new-NFT-box4-form-content-website-lable {
+  margin-bottom: 8px;
+}
+.create-new-NFT-box4-form-content-website-input {
+  border-style: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #121212;
+  color: #ccc;
+  transition: all 200ms ease;
+}
+.create-new-NFT-box4-form-content-description-lable {
+  margin-bottom: 8px;
+}
+.create-new-NFT-box4-form-content-description-input {
+  border-style: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #121212;
+  color: #ccc;
+  transition: all 200ms ease;
+}
+.create-new-NFT-box4-paragraph {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 200;
+  color: #ccc;
+}
+
+.create-new-NFT-box5-header {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.create-new-NFT-box5-card {
+  justify-content: space-around;
+}
+.card.create-new-NFT-box5-card-line {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.card img.create-new-NFT-box5-card-profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+  margin-bottom: 10px;
+}
+.create-new-NFT-box5-card-profile-content {
+  position: relative;
+}
+.create-new-NFT-box5-card-profile-tick {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #97fb57;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-new-NFT-box5-card-profile-text {
+  margin-top: 20px;
+}
+/****************************************/
+.create-new-NFT-box5-card-info {
+  color: white;
+  margin: 25px;
+  margin-top: 30px;
+}
+.create-new-NFT-box5-form-content-royalties-lable {
+  margin-bottom: 10px;
+}
+.create-new-NFT-box5-form-content-royalties-input {
+  border-radius: 15px;
+  border-style: none;
+  padding: 8px;
+}
+.create-new-NFT-box5-form-content-network-lable {
+  margin-bottom: 10px;
+}
+.create-new-NFT-box5-form-content-network-input {
+  border-radius: 15px;
+  border-style: none;
+  padding: 8px;
+}
+.create-new-NFT-box5-form-content-price-lable {
+  margin-bottom: 10px;
+}
+.create-new-NFT-box5-form-content-price-input {
+  border-radius: 15px;
+  border-style: none;
+  padding: 8px;
+}
+.create-new-NFT-box6 {
+  margin-top: 30px;
+}
+.create-new-NFT-box6-button {
+  justify-content: center;
+  gap: 30px;
+}
+.create-new-NFT-box6-button-mint {
+  border-style: none;
+  padding: 8px 100px;
+  border-radius: 30px;
+  background-color: #97fb57;
+  color: #121212;
+  box-shadow: 0px 4px 19px 0px rgba(137, 170, 208, 0.3);
+  transition: all 200ms ease;
+}
+.create-new-NFT-box6-button-preview {
+  border-style: none;
+  padding: 8px 100px;
+  border-radius: 30px;
+  background-color: #97fb57;
+  color: #121212;
+  box-shadow: 0px 4px 19px 0px rgba(137, 170, 208, 0.3);
+  transition: all 200ms ease;
+}
+/********HOVER***********/
+.create-new-NFT-box3-drop-zone-lable:hover {
+  color: #c1fa3d;
+  font-size: 16px;
+}
+.drop-zone-lable-symbol:hover {
+  font-size: 80px;
+}
+.create-new-NFT-box3-button:hover {
+  background-color: #97fb57;
+  border: none;
+  color: #202330;
+  font-weight: 600;
+  padding: 20px 60px;
+  box-shadow: 5px 5px 30px #97fb57;
+}
+.create-new-NFT-box4-form-content-description-input:hover {
+  padding: 20px;
+  box-shadow: 5px 5px 30px #121212;
+  background-color: #ccc;
+  color: #121212;
+}
+.create-new-NFT-box4-form-content-website-input:hover {
+  padding: 20px;
+  box-shadow: 5px 5px 30px #121212;
+  background-color: #ccc;
+  color: #121212;
+}
+.create-new-NFT-box4-form-content-item-name-input:hover {
+  padding: 20px;
+  box-shadow: 5px 5px 30px #121212;
+  background-color: #ccc;
+  color: #121212;
+}
+.create-new-NFT-box6-button-mint:hover {
+  padding: 10px 100px;
+  border: 1px solid #121212;
+}
+.create-new-NFT-box6-button-preview:hover {
+  padding: 10px 100px;
+  border: 1px solid #121212;
+}

@@ -1,0 +1,178 @@
+#root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+}
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #121212;
+  background: linear-gradient(112.1deg, #121212 11.4%, rgb(39, 46, 68) 70.2%);
+}
+.layout-container {
+  min-height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+  padding: 100px 60px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.box-1 {
+  margin-bottom: 30px;
+}
+.box-1-login {
+  font-size: 30px;
+  font-weight: 500;
+}
+.box-1-register {
+  font-size: 15px;
+  font-weight: 200;
+  align-items: flex-start;
+}
+.box-1-register-no-account {
+  border: 1px solid #97fb57;
+  border-radius: 30px;
+  background: none;
+  color: #ccc;
+  padding: 8px;
+  margin-top: -10px;
+  font-weight: 300;
+}
+
+.header2 {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 40px;
+}
+.header3 {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.Social-Account {
+  list-style-type: none;
+  padding-left: 0;
+}
+.list-social-item {
+  margin: 10px 10px 5px 0;
+}
+.list-social-button {
+  flex-grow: 1;
+  background: #97fb57;
+  color: #121212;
+  padding: 10px 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.metamask {
+  text-align: left;
+  background: #97fb57;
+
+  color: #121212;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  width: 100%;
+}
+.connect {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #202c3c, #1a1b1f);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.coinbase {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #1b2340, #191a1e);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+
+.trust {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.bitget {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.imtoken {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.particle {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.line-container {
+  flex: 1;
+}
+.text {
+  margin: 0 15px;
+  font-size: x-small;
+  color: rgb(212, 212, 212);
+}
+/*************************HOVER***************/
+.metamask:hover {
+  border: 1px solid #121212;
+  box-shadow: 5px 5px 30px #97fb57;
+}
+.list-social-button:hover {
+  border: 1px solid #121212;
+  box-shadow: 5px 5px 30px #97fb57;
+}
+.box-1-register-no-account:hover {
+  border: 1px solid #121212;
+  box-shadow: 5px 5px 30px #97fb57;
+}

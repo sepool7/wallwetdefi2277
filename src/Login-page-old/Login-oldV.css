@@ -1,0 +1,142 @@
+/*.layout-container {
+  background-color: black;
+  padding: 60px;
+}
+.header {
+  font-family: sans-serif;
+  color: white;
+  font-weight: 900;
+}
+.header2 {
+  font-family: sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: medium;
+  margin-top: 40px;
+}
+.header3 {
+  font-family: sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: medium;
+  margin-top: 40px;
+}
+p {
+  font-family: sans-serif;
+  font-size: small;
+  color: white;
+  padding-left: 4px;
+}
+.link-style {
+  text-decoration: none;
+  color: rgb(98, 98, 233);
+}
+
+.Social-Account {
+  list-style-type: none;
+  padding-left: 0;
+}
+.list-social-item {
+  margin: 10px 10px 5px 0;
+}
+.list-social-button {
+  flex-grow: 1;
+  background: linear-gradient(to right, #1f2d3a, #181b20);
+  color: white;
+  padding: 10px 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.metamask {
+  text-align: left;
+  background: linear-gradient(to right, #392a17, #1b1b1b);
+
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  width: 100%;
+}
+.connect {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #202c3c, #1a1b1f);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.coinbase {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #1b2340, #191a1e);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+
+.trust {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.bitget {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.imtoken {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.particle {
+  text-align: left;
+  flex-grow: 1;
+  background: linear-gradient(to right, #161a1c, #18191b);
+  color: white;
+  padding: 10px 85px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+}
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.line-container {
+  flex: 1;
+}
+.text {
+  margin: 0 15px;
+  font-size: x-small;
+  color: rgb(212, 212, 212);
+}*/
