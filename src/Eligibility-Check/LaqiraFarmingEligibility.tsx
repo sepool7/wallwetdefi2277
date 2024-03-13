@@ -1,5 +1,53 @@
 import "./LaqiraFarmingEligibility.css";
+import { useState } from 'react';
+
+// import { useWallet } from '@solana/wallet-adapter-react';
+
+
 function LaqiraFarmingEligibility() {
+  const [vectPrice, setVectPrice] = useState<number | null>(null);
+  const [vectAmount, setVectAmount] = useState<string>('');
+  const [totalValue, setTotalValue] = useState<string | null>(null);
+
+
+  async function connectPhantomWallet() {
+    try {
+      if ('solana' in window) {
+        const { solana } = window;
+        if (solana.isPhantom) {
+          const response = await solana.connect();
+          console.log('Connected with Public Key:', response.publicKey.toString());
+        } else {
+          console.error('Phantom wallet not found!');
+        }
+      } else {
+        console.error('Solana object not found! Make sure you have Phantom wallet installed.');
+      }
+    } catch (error) {
+      console.error('Failed to connect to Phantom wallet:', error);
+    }
+  }
+
+  async function checkVECTPrice() {
+    try {
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=Vectorium&vs_currencies=usd');
+      const data = await response.json();
+      const price = data.vectorium.usd;
+      setVectPrice(price);
+
+      // Convert vectAmount to a number for the calculation
+      const numericVectAmount = parseFloat(vectAmount);
+      if (!isNaN(numericVectAmount) && price) {
+        const value = (numericVectAmount * price).toFixed(2);
+        setTotalValue(value);
+      }
+    } catch (error) {
+      console.error('Failed to fetch VECT price:', error);
+    }
+  }
+  
+
+
   return (
     <div
       className="farmingEligibilityCheck-container"
@@ -40,22 +88,44 @@ function LaqiraFarmingEligibility() {
             gap: 20,
           }}
         >
-          <button className="farmingEligibilityCheck-menu-middleTop-laqira">
+          <button
+            className="farmingEligibilityCheck-menu-middleTop-laqira"
+            onClick={() => window.open('https://vectorium.co/', '_blank')}
+          >
             Vectorium
           </button>
-          <button className="farmingEligibilityCheck-menu-middleTop-farming">
-            Defi Wallet
-          </button>
-          <button className="farmingEligibilityCheck-menu-middleTop-contact">
-            Contact
-          </button>
+          <button
+          className="farmingEligibilityCheck-menu-middleTop-farming"
+          onClick={() => window.open('https://solscan.io/token/VePPxQ3cmkVK44xrQVCH4oGTnRgQRWAoAFVdMnK4kX2', '_blank')}
+        >
+          Vectorium Explorer
+        </button>
+        <button
+          className="farmingEligibilityCheck-menu-middleTop-contact"
+          onClick={() => window.open('https://www.coingecko.com/en/coins/vectorium', '_blank')}
+        >
+          Vectorium Chart
+        </button>
         </div>
         <button
-          className="farmingEligibilityCheck-menu-middleTop-comingSoon"
-          style={{ display: "flex", flexDirection: "row-reverse" }}
-        >
-          Login
-        </button>
+      onClick={connectPhantomWallet}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "10px 20px",
+        borderRadius: "20px",
+        background: "rebeccapurple",
+        color: "white",
+        border: "none",
+        cursor: "pointer",
+        outline: "none",
+        fontSize: "16px",
+      }}
+    >
+      Connect to Phantom
+    </button>
+
       </div>
 
       <div
@@ -116,23 +186,34 @@ function LaqiraFarmingEligibility() {
           
         </div>
         <form
-          action=""
-          className="farmingEligibilityCheck-content-line-3-form"
-          style={{ display: "flex", flexWrap: "wrap", gap: 10 }}
+        // Prevent form from submitting and refreshing the page
+        onSubmit={(e) => e.preventDefault()}
+        className="farmingEligibilityCheck-content-line-3-form"
+        style={{ display: "flex", flexWrap: "wrap", gap: 10 }}
+      >
+        <input
+          type="text"
+          placeholder="Add the Vect Amount you have and press the check Vect price"
+          className="farmingEligibilityCheck-content-line-3-form-input"
+          style={{ flexGrow: 10 }}
+          onChange={(e) => setVectAmount(e.target.value)} // Update vectAmount as the user types
+          value={vectAmount}
+        />
+        <button
+          type="button" // Ensure this button doesn't submit the form
+          className="farmingEligibilityCheck-content-line-3-form-button"
+          onClick={checkVECTPrice}
+          style={{ flexGrow: 1 }}
         >
-          <input
-            type="text"
-            placeholder="Paste wallet address here ..."
-            className="farmingEligibilityCheck-content-line-3-form-input"
-            style={{ flexGrow: 10 }}
-          />
-          <button
-            className="farmingEligibilityCheck-content-line-3-form-button"
-            style={{ flexGrow: 1 }}
-          >
-            Check VECT Price
-          </button>
-        </form>
+          Check VECT Price
+        </button>
+      </form>
+        {/* Display the total value if available */}
+      {totalValue !== null && (
+        <div className="farmingEligibilityCheck-price-display">
+          <p>Total Value of Your VECT: {totalValue}$</p>
+        </div>
+      )}
       </div>
 
       <div
@@ -145,11 +226,15 @@ function LaqiraFarmingEligibility() {
         }}
       >
         <button className="farmingEligibilityCheck-footer-button-ComingSoon">
-          Vectorium Main Page
+          Staking Platform (Coming Soon)
         </button>
-        <button className="farmingEligibilityCheck-footer-button-LaqiracePaper">
-          Vectorium White Paper
-        </button>
+        <button
+        className="farmingEligibilityCheck-footer-button-LaqiracePaper"
+        onClick={() => window.open('https://vectorium.co/blockchain-technologies', '_blank')}
+      >
+        Vectorium White Paper
+      </button>
+
       </div>
 
       <div
