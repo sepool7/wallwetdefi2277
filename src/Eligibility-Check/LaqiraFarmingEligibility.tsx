@@ -1,14 +1,35 @@
 import "./LaqiraFarmingEligibility.css";
 import { useState } from 'react';
+import { useEffect} from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
+
 
 // import { useWallet } from '@solana/wallet-adapter-react';
 
 
 function LaqiraFarmingEligibility() {
-  const [vectPrice, setVectPrice] = useState<number | null>(null);
+  const [, setVectPrice] = useState<number | null>(null);
   const [vectAmount, setVectAmount] = useState<string>('');
   const [totalValue, setTotalValue] = useState<string | null>(null);
+  const [vectCurrentPrice, setVectCurrentPrice] = useState(null);
+  const fetchVectPrice = async () => {
+    try {
+      const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=Vectorium&vs_currencies=usd');
+      const data = await response.json();
+      setVectCurrentPrice(data.vectorium.usd);
+    } catch (error) {
+      console.error('Error fetching Vect price:', error);
+    }
+  };
+  useEffect(() => {
+    fetchVectPrice();
+    const interval = setInterval(fetchVectPrice, 30000); // 30-second interval
 
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+  const navigate = useNavigate();
 
   async function connectPhantomWallet() {
     try {
@@ -173,7 +194,8 @@ function LaqiraFarmingEligibility() {
           </div>
         </div>
         <div className="farmingEligibilityCheck-content-line-2-header">
-          Vectorium Defi Wallet{" "}
+        VECT Price{" "}
+          <div>{vectCurrentPrice ? `$${vectCurrentPrice}` : 'Loading...'}</div>
           <span
             style={{
               fontFamily: "cursive",
@@ -225,8 +247,11 @@ function LaqiraFarmingEligibility() {
           gap: 20,
         }}
       >
-        <button className="farmingEligibilityCheck-footer-button-ComingSoon">
-          Staking Platform (Coming Soon)
+        <button 
+        className="farmingEligibilityCheck-footer-button-ComingSoon"
+        onClick={() => navigate('/staking')} // Update this line to navigate to the staking route
+        >
+          Staking Platform
         </button>
         <button
         className="farmingEligibilityCheck-footer-button-LaqiracePaper"
