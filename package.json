@@ -30,9 +30,13 @@
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.23.0",
     "viem": "^2.9.26",
     "wagmi": "^2.5.22"
+=======
+    "react-router-dom": "^6.22.3"
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

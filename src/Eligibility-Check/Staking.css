@@ -1,4 +1,5 @@
 .staking-container {
+<<<<<<< HEAD
   background-color: #252236; 
   color: white;
   height: 100vh; 
@@ -20,13 +21,40 @@
     justify-content: center;
     align-items: center;
     gap: 8px; 
+=======
+  background-color: #252236; /* Black background color */
+  color: white;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align to the top */
+  padding: 100px;
+  min-height: 100vh; /* Minimum viewport height to take full height of the browser window */
+  gap: 30px; /* You can adjust this value to set how far from the top you want your boxes */
+}
+
+.staking-page {
+    background-color: #363636; /* Coal grey background */
+    color: white;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 8px; /* Small gap between flex items */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
     padding: 20px;
   }
   
   .balance-box-container {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     gap: 150px; 
+=======
+    gap: 150px; /* Adjust this value to set the gap between boxes */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
     justify-content: center;
     align-items: center;
     width: 100%
@@ -34,14 +62,21 @@
 
   
   .balance-box {
+<<<<<<< HEAD
     background-color: #2c3338;
     padding: 15px 20px;
     border-radius: 8px; 
+=======
+    background-color: #2c3338; /* Box background color */
+    padding: 15px 20px;
+    border-radius: 8px; /* More pronounced rounded corners */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 200px;
+<<<<<<< HEAD
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border: 1px solid #3f4850; 
@@ -54,6 +89,20 @@
   .balance-box:hover {
     transform: translateY(-5px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    border: 1px solid #3f4850; /* Optional: subtle border */
+    animation: popIn 10s ease forwards; /* Apply the animation */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add background-color transition */
+  }
+  .balance-box.active {
+    background-color: #565f01; /* Green background */
+  }
+  .balance-box:hover {
+    transform: translateY(-5px); /* Moves box up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover for a 'lifting' effect */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   }
   
   .balance-box label {
@@ -69,9 +118,15 @@
     color: white;
     border: none;
     padding: 10px;
+<<<<<<< HEAD
     width: 100%; 
     text-align: center;
     margin-bottom: 10px; 
+=======
+    width: 100%; /* Adjust this to change the width of the inputs */
+    text-align: center;
+    margin-bottom: 10px; /* Space between the input and the text below it */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   }
   
   /* Remove spinner from number inputs */
@@ -87,7 +142,11 @@
   }
     
   .balance-box div {
+<<<<<<< HEAD
     font-size: 1.2em;
+=======
+    font-size: 1.2em; /* Size of the unstaking and rewards display */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   }
   
   @keyframes popIn {
@@ -105,13 +164,19 @@
     width: 100%;
     max-width: 900px;
     margin: auto;
+<<<<<<< HEAD
     margin-top: 30px;
     width: 90%; 
+=======
+    margin-top: 80px; /* Spacing from the boxes above */
+    width: 90%; /* Take the full width of the container */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   }
   
   .validators-container h2 {
     color: white;
     text-align: left;
+<<<<<<< HEAD
     padding-left: 20px; 
   }
   
@@ -123,19 +188,40 @@
     padding: 10px;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+=======
+    padding-left: 20px; /* Aligns with the boxes above if they have similar padding */
+  }
+  
+  .validators-list {
+    max-height: 200px; /* Adjust this value as needed */
+    overflow-y: auto; /* Adds a scrollbar when content overflows */
+    background-color: #2c3338; /* Similar to the balance box background for consistency */
+    color: white;
+    padding: 10px;
+    border-radius: 8px; /* Optional, for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, for some depth */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   }
   
   .validator-row {
     padding: 10px;
+<<<<<<< HEAD
     border-bottom: 1px solid #3f4850; 
   }
   
   
+=======
+    border-bottom: 1px solid #3f4850; /* Subtle separator for each row */
+  }
+  
+  /* Remove border from the last row */
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
   .validator-row:last-child {
     border-bottom: none;
   }
   .buttons-container {
     display: flex;
+<<<<<<< HEAD
     justify-content: center; 
     align-items: center; 
     width: 100%; 
@@ -422,3 +508,36 @@
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+=======
+    justify-content: center; /* This will center the buttons horizontally */
+    align-items: center; /* This will center the buttons vertically if the staking-container is tall enough */
+    width: 100%; /* Full width to allow centering within the parent */
+    margin-top: 20px; /* Space from the list above */
+  }
+  
+  .custom-button {
+    padding: 10px 100px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 20px; /* Gives the rounded corners */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .stake-button {
+    background-color: #7b61ff; /* Purple background color */
+  }
+  
+  .calculate-button {
+    background-color: #674ded; /* Slightly different purple shade for second button */
+  }
+  
+  .custom-button:hover {
+    background-color: #8662ff; /* Lighter purple for hover effect */
+    /* You may adjust the color for hover state as per your design */
+  }
+  
+  
+>>>>>>> 83cd3b4fe9aab513b4b3a34ab59043895125d91b
