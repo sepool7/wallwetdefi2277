@@ -13,15 +13,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dynamic-labs/ethereum": "^2.0.4",
+    "@dynamic-labs/sdk-react": "^0.16.24",
+    "@dynamic-labs/sdk-react-core": "^2.0.4",
+    "@dynamic-labs/solana": "^2.0.4",
+    "@dynamic-labs/wagmi-connector": "^2.0.4",
+    "@solana/spl-token": "^0.4.6",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/wallet-adapter-wallets": "^0.19.31",
-    "@solana/web3.js": "^1.91.0",
+    "@solana/web3.js": "^1.91.7",
+    "@tanstack/react-query": "^5.32.0",
     "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1"
+    "react-router-dom": "^6.23.0",
+    "viem": "^2.9.26",
+    "wagmi": "^2.5.22"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

@@ -1,0 +1,424 @@
+.staking-container {
+  background-color: #252236; 
+  color: white;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  align-items: flex-start; 
+  padding: 100px;
+  min-height: 100vh; 
+  gap: 30px; 
+}
+
+.staking-page {
+    background-color: #363636; 
+    color: white;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    padding: 20px;
+  }
+  
+  .balance-box-container {
+    display: flex;
+    flex-direction: row;
+    gap: 150px; 
+    justify-content: center;
+    align-items: center;
+    width: 100%
+  }
+
+  
+  .balance-box {
+    background-color: #2c3338;
+    padding: 15px 20px;
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border: 1px solid #3f4850; 
+    animation: popIn 10s ease forwards; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .balance-box.active {
+    background-color: #565f01;
+  }
+  .balance-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .balance-box label {
+    font-size: 14px;
+    color: #b1b1b1;
+    margin-bottom: 5px;
+  }
+  
+  .balance-box input,
+  .balance-box .unstaking-amount,
+  .balance-box .claimable-rewards {
+    background-color: #36454F;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+  
+  /* Remove spinner from number inputs */
+  .balance-box input[type=number]::-webkit-inner-spin-button,
+  .balance-box input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  /* Adjust the font size for the amounts displayed */
+  .balance-box .unstaking-amount,
+  .balance-box .claimable-rewards {
+    font-size: 16px;
+  }
+    
+  .balance-box div {
+    font-size: 1.2em;
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0.98);
+      opacity: 0.6;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .validators-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    width: 90%; 
+  }
+  
+  .validators-container h2 {
+    color: white;
+    text-align: left;
+    padding-left: 20px; 
+  }
+  
+  .validators-list {
+    max-height: 200px; 
+    overflow-y: auto; 
+    background-color: #2c3338; 
+    color: white;
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .validator-row {
+    padding: 10px;
+    border-bottom: 1px solid #3f4850; 
+  }
+  
+  
+  .validator-row:last-child {
+    border-bottom: none;
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin-top: 20px; 
+  }
+  
+  .custom-button {
+    padding: 12px 30px; /* Adjust padding as necessary */
+    min-width: 150px; /* Set a minimum width */
+    height: 50px; /* Set a fixed height */
+    line-height: 50px; /* Align text vertically in the center */
+    border: none;
+    background-color: #7b61ff; /* Primary color for the button */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px; /* Fully rounded corners */
+    cursor: pointer;
+    display: inline-flex; /* Use flex to center the text horizontally and vertically */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center; /* Ensure text is centered if flex doesn't apply for any reason */
+    transition: background-color 0.03s, transform 0.03s; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 0 10px; /* Add margin for spacing if buttons are next to each other */
+  }
+  
+  .stake-button {
+    background-color: #7b61ff; 
+  }
+  
+  .calculate-button {
+    background-color: #674ded; 
+  }
+  
+  .custom-button:hover {
+    background-color: #6658c4; /* A slightly darker shade on hover */
+    transform: translateY(-2px); /* A subtle 'lift' effect on hover */
+  }
+  
+  .validator {
+    margin-bottom: 10px; /* Add some space between each validator */
+  }
+  .validator-toggle {
+    background-color: #414a5c; /* A darker shade for better contrast */
+    color: #fff;
+    padding: 15px 20px; /* More padding for a larger button appearance */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    width: 100%; /* Full width within the container */
+    text-align: left; /* Align the text to the left */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    outline: none; /* Remove the outline to clean up focus state */
+  }
+  
+  .validator-toggle:hover, .validator-toggle:focus {
+    background-color: #525e72; /* A lighter shade for hover and focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for a 'lifted' effect */
+  }
+  
+  /* Style for the active validator button */
+  .validator-toggle.active {
+    background-color: #7b61ff; /* Highlight color for the active validator */
+  }
+  
+  /* Style for the validator description */
+  .validator-description {
+    background-color: #2c3338; /* Slightly different background to distinguish from the button */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 5px; /* Space between the button and description */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Add this if you want a transition effect when the description is revealed */
+  /* .validator-description {
+    animation: fadeIn 0.3s ease-in-out;
+  } */
+
+  .validator-description input[type=range] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Specific styles for the buttons under Validator 1 */
+  .choose-validator-button,
+  .check-earth-green-button {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Space between the buttons */
+    width: 100%; /* Full width buttons */
+  }
+  
+  .check-earth-green-button {
+    background-color: #6FA83A; /* A greenish color to signify Earth Green activity */
+  }
+  
+  .choose-validator-button:hover,
+  .check-earth-green-button:hover {
+    /* Slightly different hover effect for the new buttons */
+    opacity: 0.9;
+  }
+  .modal {
+    display: block !important; /* Show the modal */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: auto; /* Align to the center */
+    padding: 40px;
+    border: 1px solid #888;
+    width: 50%; /* You can adjust this as needed */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+  /* Style the form elements inside the modal */
+  .modal-content form {
+    display: flex;
+    flex-direction: column; /* Stack the labels vertically */
+    gap: 20px; /* Add space between form fields */
+  }
+  
+  .modal-content label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="text"]:focus {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 24px); /* Compensate for padding and border */
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .modal-content input[type="text"]:focus {
+    border-color: #7b61ff; /* Highlight border when focused */
+  }
+  
+  .modal-content button[type="submit"] {
+    background-color: #7b61ff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background-color: #6658c4; /* Darken the button color on hover */
+  }
+
+  .modal-content input[type="number"],
+.modal-content input[type="text"] {
+  border: 2px solid #aaa; /* Solid border with a light gray color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Spacing inside the inputs */
+  font-size: 16px; /* A readable font size */
+  width: 100%; /* Full width to fill the form */
+  box-sizing: border-box; /* Include padding in the width */
+  margin: 10px 0; /* Margin for spacing around the input */
+}
+.guideline-container {
+  background-color: transparent; /* No background */
+  box-shadow: none; /* No shadow */
+  margin: 0; /* No margin */
+  padding: 0; /* No padding */
+  display: flex; /* To align items in a row */
+  justify-content: flex-end; /* Align to the right side */
+  width: 100%; /* Take full width to align content inside it properly */
+}
+
+.guidelines-content {
+  padding: 20px; /* Add padding around the content for better spacing */
+}
+
+.staking-guidelines {
+  list-style-type: decimal; /* Use numbers for the guideline steps */
+  padding: 0;
+  margin: 0;
+  padding-left: 20px; /* Indent the list items */
+}
+
+
+.staking-guidelines h2 {
+  color: #000; /* Black color for the headings */
+  margin-bottom: 16px; /* Space after the heading */
+}
+
+.staking-guidelines li {
+  font-size: 16px; /* Set the font size for list items */
+  line-height: 1.5; /* Spacing between lines */
+  margin-bottom: 10px; /* Space between list items */
+  color: #333; /* Darker color for readability */
+}
+
+/* Add this if your Active Validators heading has specific font properties */
+.validators-container h2 {
+  font-size: 24px; /* Match the font size */
+  font-weight: bold; /* Ensure font weight matches */
+  color: #FFFFFF; /* Match the color */
+  /* Add any other properties that the heading has */
+}
+
+
+.modal-content input[type="number"]:focus,
+.modal-content input[type="text"]:focus {
+  border-color: #7b61ff; /* Highlight color for the focused input */
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 8px rgba(123, 97, 255, 0.8); /* Soft glow for focus */
+}
+
+.modal-content button[type="submit"] {
+  background-color: #7b61ff; /* Match your primary color theme */
+  color: white; /* Text color for the button */
+  padding: 15px 30px; /* Larger padding for a bigger button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* A larger font size for the button */
+  font-weight: bold; /* Make the button text bold */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: auto; /* Auto width based on content */
+  display: block; /* Block level so it takes its own line */
+  margin: 20px auto 0; /* Center the button and add margin on top */
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #6658c4; /* A slightly darker purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for 'lifted' effect */
+}
+.guideline-button {
+  background-color: #555; /* Or any other color */
+  background-color: #7b61ff; 
+}
+
+.staking-guidelines {
+  list-style-type: decimal; /* If you want numbers */
+  padding-left: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+    
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
